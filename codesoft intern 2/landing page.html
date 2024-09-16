@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="landing page.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" ><img src="logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>  
+        </header> 
+        <div class="content">
+            <div class="textBox">
+                <h2>Cake<br><span>Studio</span></h2>
+<p>All our products are made from scratch using family recipes with only the highest quality ingredients. We bake and sell fresh daily to ensure only the best products are sold to our customers</p>              
+  <a href="#">Buy Now</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.webp" class="cake" alt="Cake Image">
+            </div>
+        </div>  
+        <ul class="thumb">
+            <li><img src="img1.webp" alt="Thumbnail 1" onclick="imgSlider('img1.webp'); changeCircleColor('#B1AFFF')"></li>
+            <li><img src="img2.jpg" alt="Thumbnail 2" onclick="imgSlider('img2.jpg'); changeCircleColor('#FFD18E')"></li>
+            <li><img src="img3.jpg" alt="Thumbnail 3" onclick="imgSlider('img3.jpg'); changeCircleColor('#BBE9FF')"></li>
+        </ul>  
+    </section>
+       
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.cake').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
